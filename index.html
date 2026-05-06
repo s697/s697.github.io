@@ -5,36 +5,69 @@
 
   <style>
     body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
       background: #0d1117;
       color: #c9d1d9;
-      font-family: Arial;
-      margin: 0;
-      padding: 40px;
+      line-height: 1.6;
     }
 
-    h1 {
-      color: white;
-      font-size: 40px;
-    }
-
-    .container {
+    header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 60px 10%;
+      flex-wrap: wrap;
     }
 
-    .text {
-      width: 60%;
+    h1 {
+      font-size: 48px;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #58a6ff;
+    }
+
+    .intro {
+      max-width: 600px;
     }
 
     .profile img {
-      width: 220px;
+      width: 200px;
       border-radius: 50%;
+      border: 3px solid #58a6ff;
+      transition: transform 0.3s ease;
+    }
+
+    .profile img:hover {
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 40px 10%;
     }
 
     h2 {
       color: white;
-      margin-top: 40px;
+      margin-bottom: 15px;
+      border-left: 4px solid #58a6ff;
+      padding-left: 10px;
+    }
+
+    .card {
+      background: #161b22;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      background: #1f2937;
     }
 
     a {
@@ -42,55 +75,79 @@
       text-decoration: none;
     }
 
-    .news {
-      margin-top: 20px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
     }
 
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #8b949e;
+      font-size: 14px;
+    }
   </style>
 </head>
 
 <body>
 
-<div class="container">
-  <div class="text">
+<header>
+  <div class="intro">
     <h1>Steven Moreta</h1>
-
-    <p>Estudiante de informática 💻</p>
+    <p class="subtitle">Estudiante de Ciencias de la Computación 💻</p>
 
     <p>
-      Estoy interesado en desarrollo web, inteligencia artificial
-      y nuevas tecnologías. Me gusta crear proyectos y aprender
-      constantemente 🚀
+      Me enfoco en el desarrollo de software, algoritmos y sistemas inteligentes.
+      Me gusta resolver problemas complejos y construir soluciones eficientes.
     </p>
-
   </div>
 
   <div class="profile">
-    <img src="https://via.placeholder.com/220" alt="foto">
+    <img src="https://via.placeholder.com/200" alt="foto">
   </div>
-</div>
+</header>
 
-<h2>News</h2>
+<section>
+  <h2>Intereses</h2>
+  <div class="grid">
+    <div class="card">🤖 Inteligencia Artificial</div>
+    <div class="card">💻 Desarrollo de Software</div>
+    <div class="card">⚙️ Algoritmos</div>
+    <div class="card">🔌 Sistemas Embebidos</div>
+  </div>
+</section>
 
-<div class="news">
-  <p><b>Abr 2026</b> — Empecé mi portafolio web 🔥</p>
-  <p><b>Ene 2026</b> — Inicié mis estudios en informática</p>
-</div>
+<section>
+  <h2>Proyectos</h2>
 
-<h2>Proyectos</h2>
+  <div class="card">
+    🔹 Sistema en Java con arquitectura en capas
+  </div>
 
-<p>
-  🔹 Sistema web en Java <br>
-  🔹 Página web personal <br>
-  🔹 Próximamente más...
-</p>
+  <div class="card">
+    🔹 Máquina expendedora con autómatas
+  </div>
 
-<h2>Contacto</h2>
+  <div class="card">
+    🔹 ExoBot (JavaFX + SQLite + SSH)
+  </div>
 
-<p>
-  GitHub: <a href="https://github.com/s697">s697</a>
-</p>
+  <div class="card">
+    🔹 PMEcuaAnt (máquina de estados)
+  </div>
+</section>
+
+<section>
+  <h2>Contacto</h2>
+  <div class="card">
+    GitHub: <a href="https://github.com/s697">s697</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Steven Moreta - Portafolio personal
+</footer>
 
 </body>
 </html>
-``
